@@ -1,0 +1,28 @@
+{% extends 'base_a.html' %}
+{% block content %}
+<font size="+1" color="red">
+{{msg}}
+</font>
+<center>
+<h2><font size="" color="">Add Websites</h2>
+<br><br>
+<form action="/addweb/" method="POST" class="register">
+{% csrf_token %}
+<TABLE  id="tab" width="60%"cellspacing=10>
+<tr><td><h4><b>Website
+<h4>  <input type="url" required  class="form-control" name="web"/>
+
+	
+<tr><td><button  class="form-control">Add &raquo;</button></div>
+</table>
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;  
+&nbsp;
+<div>
+    </form>
+    </body>
+</html>
+
+{% endblock %}

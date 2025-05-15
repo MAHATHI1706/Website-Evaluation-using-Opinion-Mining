@@ -1,0 +1,50 @@
+{% extends 'base_a.html' %}
+{% block content %}
+
+
+                <h3 >Classifications of Algoritms For Sentiment Analysis</h6>
+ 
+<br>
+<center>
+<font size="+1" color="#26ce13">{{msg}}
+<br>
+	<table id="tab" width="60%">
+	
+	<TR><th>
+	
+
+
+	<form method="get" action="/nbtrain/">
+	<input type="submit" value="Naive Bayes Classifier" class="form-control"> 
+	</form>
+
+	<TR><th align="center">	
+	<form method="get" action="/svmtrain/">
+	<input type="submit" value="SVM" class="form-control"> 
+	</form>
+
+<TR><th>
+	<form method="get" action="/rftrain/">
+	<input type="submit" value="Random forest" class="form-control"> 
+	</form>
+
+
+<TR><th>
+	<form method="get" action="/nntrain/">
+	<input type="submit" value="Neural Network" class="form-control"> 
+	</form>
+
+
+	
+
+	</tr>
+	</table>
+
+
+</form>
+<br><br><br>
+
+<br><br><br><br><br>	
+
+
+{% endblock %}

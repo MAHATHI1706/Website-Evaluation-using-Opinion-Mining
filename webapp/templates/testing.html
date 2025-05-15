@@ -1,0 +1,25 @@
+{% extends 'base_a.html' %}
+{% block content %}
+
+<font size="" color="#cc0000"><b>{{msg}}</font></b>
+<center>
+<h2>Testing Process</h2>
+<br>
+<form method="post" action="/testing/">
+{% csrf_token %}
+		<table >
+  
+	    <tr align="right">
+        <td > <input type="submit" class="form-control"value="Testing the Algorithms "><br><br>
+		</td>
+    </tr>
+
+
+</table>
+
+
+	</form>	
+
+	<a href="/accuracyview">View Accuracy</a>
+
+{% endblock %}

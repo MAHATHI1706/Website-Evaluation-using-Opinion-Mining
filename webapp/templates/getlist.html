@@ -1,0 +1,40 @@
+{% extends 'base_a.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<h3>
+	
+{{msg}}
+	
+	<h2>
+	View URL's
+</h2>
+</h3>
+<center>
+				<table id="tab" width="70%">
+<tr>
+	<th>Sno<th>Select URL<th>
+
+				{% for d in data %}
+<tr><td>{{forloop.counter}}<td>{{d.url}}<td>
+
+<form method="post" action="/aviewcomments/">
+{% csrf_token %}
+	<input type="hidden" name="uid" value="{{d.id}}">
+	<input type="submit" value="View Comments" class="form-control">
+</form>
+
+
+				{% endfor %}
+
+</tr>
+</table>
+
+
+
+
+	
+{% endblock %}
